@@ -22,6 +22,7 @@
 #         return"不支持这个运算"
 # result=calculate(10, 5, "*")
 # print(result)
+print("欢迎使用财富预测器")
 def calculate_future_money(now_save, salary_month, expense_month, years):
     # now_save存款, salary薪水, expense支出, years年份
     future_money = now_save + (salary_month - expense_month) * 12 * years
