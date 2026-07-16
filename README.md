@@ -117,14 +117,28 @@ python-ai-90days
 - 财富等级判断
 
 ---
+## 📊 Project Status
+
+### 当前进度
+
+- ✅ Python 基础学习 (50%)
+- 🚀 AI 学习阶段 (进行中)
+- ⏳ 自动化工具开发 (计划)
+- ⏳ AI 应用项目开发 (计划)
+
+- 最后更新：
+2026-07-16
+
+
+----------------
+
 ## 🛠 技术栈
 
-- Python 🐍
-- Git / GitHub
-- AI Tools
-- Automation
-- API Development
----
+- 🐍 Python
+- 🔧 Git / GitHub
+- 🤖 AI Tools
+- ⚙️ Automation
+- 🌐 API Development
 
 # 📈 后续计划
 
