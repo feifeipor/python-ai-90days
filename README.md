@@ -1,58 +1,88 @@
 # Python AI 90 Days 🚀
 
-## 项目介绍
+我的 Python + AI 90天学习成长项目
 
-这是我的 Python + AI 90天学习项目。
+---
+
+## 📌 项目介绍
+
+这是我的 Python AI 学习记录项目。
 
 目标：
-- 掌握Python基础
-- 学习AI工具开发
-- 完成个人项目
 
+- 掌握 Python 基础
+- 学习人工智能相关技术
+- 通过项目提升编程能力
+- 建立个人作品集
 
-## 学习进度
+---
 
-### Day01
-- Python Hello World
+# 📚 学习进度
+
+## Day01 Hello World
+
+学习内容：
+
+- Python环境配置
 - print输出
+- 第一个Python程序
 
-### Day02
+
+## Day02 Money
+
+学习内容：
+
 - 变量
+- input输入
 - 基础计算
 
-### Day03
-- 条件判断
-- if / elif / else
 
-### Day04
-- 循环
-- for / while
+## Day03 Score
 
-### Day05
-- 用户信息管理
-- input输入
+学习内容：
 
-### Day06
-- 函数封装
-- return返回值
-- 财富预测器
+- if条件判断
+- 数据比较
 
 
-## 当前项目
+## Day04 Loop
 
-### 财富预测器 V1.0
+学习内容：
+
+- for循环
+- while循环
+
+
+## Day05 Profile
+
+学习内容：
+
+- 多变量应用
+- 数据分析思维
+- 储蓄率计算
+
+
+## Day06 Wealth Predictor 💰
+
+第一个小项目：
+
+财富预测器
+
 
 功能：
 
 - 输入当前存款
-- 输入收入
-- 输入支出
-- 预测未来资产
+- 输入月收入
+- 输入月支出
+- 输入计划年份
+- 计算未来资产
 - 计算储蓄率
 - 财富等级判断
 
 
-## 技术
+---
+
+# 🛠 技术栈
 
 Python
 
@@ -61,9 +91,35 @@ Git
 GitHub
 
 
-## 作者
+---
+
+# 📈 后续计划
+
+Day07 - Day30:
+
+- Python进阶
+- 文件处理
+- 数据分析
+- API调用
+
+
+Day31 - Day60:
+
+- AI基础
+- OpenAI API
+- 自动化工具
+
+
+Day61 - Day90:
+
+- AI项目开发
+- 完整作品
+
+
+---
+
+# 👨‍💻 Author
 
 飞飞
 
-Python AI 学习记录
-Day 6 completed 🚀
+Python AI学习记录
