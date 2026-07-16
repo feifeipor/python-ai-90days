@@ -1,5 +1,11 @@
 # 🚀 Python AI 90 Days
 
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![GitHub](https://img.shields.io/badge/GitHub-Project-black)
+![AI](https://img.shields.io/badge/AI-Learning-green)
+
+> 我的 Python + AI 90天成长计划
+
 > 我的 Python + AI 90天成长计划
 
 ## 👨‍💻 About Me
