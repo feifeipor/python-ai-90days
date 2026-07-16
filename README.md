@@ -17,6 +17,22 @@
 
 ---
 
+# 📂 项目结构
+
+```
+python-ai-90days
+
+├── Day01_Hello.py
+├── Day02_Money.py
+├── Day03_Score.py
+├── Day04_Loop.py
+├── Day05_Profile.py
+├── Day06_WealthPredictor.py
+└── README.md
+```
+
+---
+
 # 📚 学习进度
 
 ## Day01 Hello World
