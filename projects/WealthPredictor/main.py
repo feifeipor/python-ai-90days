@@ -1,53 +1,44 @@
-# def add (a,b):
-#     result = a+b
-#     print(result)
-# add(10,20)
-# def add(a, b):
-#     result = a + b
-#     return result
-# number = add(10, 20)
-# # print(number)
-# def calculate(a,b,operator):
-#     if operator == "+":
-#         return a+b
-#     elif operator == "-":
-#         return a-b
-#     elif operator == "*":
-#         return a*b
-#     elif operator == "/":
-#         if b == 0:
-#             return "不能除以0"
-#         return a/b
-#     else:
-#         return"不支持这个运算"
-# result=calculate(10, 5, "*")
-# print(result)
-print("欢迎使用财富预测器")
-def calculate_future_money(now_save, salary_month, expense_month, years):
-    # now_save存款, salary薪水, expense支出, years年份
-    future_money = now_save + (salary_month - expense_month) * 12 * years
-    return future_money #未来资产计算
+from tools.wealth import check_level
+from tools.money import future_money
 
-def calculate_save_rate(salary_month, expense_month):
-    rate = (salary_month - expense_month) / salary_month * 100
-    return rate
 
-def check_level(future_money):
-    if future_money >=1000000:
-        return '财富等级：优秀'
-    elif future_money >=500000:
-        return '财富等级：良好'
-    else:
-        return '继续努力'
-    
-now_save = int(input("请输入当前存款："))
-salary_month = int(input("请输入每月收入："))
-expense_month = int(input("请输入每月支出："))
-years = int(input("请输入计划年份："))
-future_money = calculate_future_money (now_save,salary_month,expense_month,years)
-save_rate = calculate_save_rate (salary_month,expense_month)
-level = check_level(future_money)
+print("-----欢迎使用财富预测器-----")
 
-print(f"未来资产：{future_money}元")
-print(f"储蓄率：{save_rate:.0f}%")
-print(level)
+name = input("请输出姓名：")
+money = int(input("请输入当前资产: "))
+income = int(input("请输入月收入: "))
+
+
+level = check_level(money, income)
+
+print("------------------------")
+print("--------财富报告----------")
+print("------------------------")
+print(f'姓名： {name}')
+print(f'当前资产； {money}')
+print(f'月收入：{income}')
+print("财富等级:", level)
+
+future = future_money(money,income,10)
+
+print(f"10年后预计资产: {future:.0f} 元")
+
+growth = future - money #增长金额
+multiple = future / money #增长倍数
+
+print(f"资产增长: {growth:.0f} 元")
+print(f"增长倍数: {multiple:.2f} 倍")
+
+from tools.advice import get_advice
+
+advice = get_advice(money,income)
+
+print("投资建议:", advice)
+
+from datetime import datetime
+
+today = datetime.now()
+
+print("报告日期：", today)
+
+print("------------------------")
