@@ -1,20 +1,35 @@
-# Python AI 90 Days 🚀
+# 🚀 Python AI 90 Days
 
-我的 Python + AI 90天学习成长项目
+> 我的 Python + AI 90天成长计划
 
+## 👨‍💻 About Me
+
+Hi，我是飞飞。
+
+正在进行 Python + AI 90天学习计划。
+
+## 🎯 项目目标
+
+- 掌握 Python 核心编程能力
+- 学习 AI API 与智能工具开发
+- 开发自动化应用
+- 完成个人 AI 项目作品集
 ---
 
 ## 📌 项目介绍
 
-这是我的 Python AI 学习记录项目。
+这是我的 Python + AI 90天成长项目。
 
-目标：
+通过90天持续学习和实践，
+从 Python 基础开始，
+逐步进入 AI 工具开发、自动化和 AI 应用开发。
 
-- 掌握 Python 基础
-- 学习人工智能相关技术
-- 通过项目提升编程能力
-- 建立个人作品集
+本项目记录：
 
+- Python 学习过程
+- AI 技术实践
+- 项目开发过程
+- 个人能力成长记录
 ---
 
 # 📂 项目结构
@@ -95,18 +110,14 @@ python-ai-90days
 - 计算储蓄率
 - 财富等级判断
 
-
 ---
+## 🛠 技术栈
 
-# 🛠 技术栈
-
-Python
-
-Git
-
-GitHub
-
-
+- Python 🐍
+- Git / GitHub
+- AI Tools
+- Automation
+- API Development
 ---
 
 # 📈 后续计划
@@ -131,11 +142,34 @@ Day61 - Day90:
 - AI项目开发
 - 完整作品
 
+## 📅 Roadmap
 
----
+### Phase 1：Python基础
+✅ Python语法
+✅ 数据结构
+✅ 文件操作
 
-# 👨‍💻 Author
+### Phase 2：AI能力
+⬜ OpenAI API
+⬜ Prompt Engineering
+⬜ AI Agent
+
+### Phase 3：自动化
+⬜ Python自动化
+⬜ 爬虫
+⬜ 工作流
+
+### Phase 4：项目
+⬜ AI工具开发
+⬜ 完整应用
+
+## 👨‍💻 Author
 
 飞飞
 
-Python AI学习记录
+Python + AI 学习者 🚀
+
+持续学习：
+- Python
+- AI Development
+- Automation
