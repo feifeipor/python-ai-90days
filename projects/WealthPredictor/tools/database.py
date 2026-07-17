@@ -2,39 +2,37 @@ import json
 import os
 
 
-DATA_FILE = "data/users.json"
+FILE_PATH = "data/users.json"
 
 
-def load_users():
-    """
-    读取用户数据
-    """
-    if not os.path.exists(DATA_FILE):
-        return []
+def add_user(user):
 
-    with open(DATA_FILE, "r", encoding="utf-8") as file:
-        return json.load(file)
+    users = []
+
+    if os.path.exists(FILE_PATH):
+
+        with open(FILE_PATH,"r",encoding="utf-8") as f:
+            users=json.load(f)
 
 
-def save_users(users):
-    """
-    保存用户数据
-    """
-    with open(DATA_FILE, "w", encoding="utf-8") as file:
+    users.append(user)
+
+
+    with open(FILE_PATH,"w",encoding="utf-8") as f:
         json.dump(
             users,
-            file,
+            f,
             ensure_ascii=False,
             indent=4
         )
 
 
-def add_user(user):
-    """
-    添加用户记录
-    """
-    users = load_users()
+def get_users():
 
-    users.append(user)
+    with open(
+        FILE_PATH,
+        "r",
+        encoding="utf-8"
+    ) as f:
 
-    save_users(users)
+        return json.load(f)

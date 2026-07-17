@@ -12,8 +12,3 @@ def check_level(money, income):
 
     else:
         return "财富积累阶段"
-if __name__ == "__main__":
-
-    print(check_level(1000000, 30000))
-    print(check_level(500000, 10000))
-    print(check_level(50000, 5000))
