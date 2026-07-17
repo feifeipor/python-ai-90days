@@ -37,3 +37,12 @@ create_report(
     advice,
     date
 )
+from tools.database import add_user
+user = {
+    "name": name,
+    "money": money,
+    "income": income
+}
+
+
+add_user(user)
