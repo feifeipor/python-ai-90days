@@ -52,67 +52,56 @@ python-ai-90days
 
 ---
 
-# 📚 学习进度
+## 📚 学习进度
 
-## Day01 Hello World
+### Day01 - Python基础
+- Python 环境搭建
+- Hello World
+- 基础语法学习
 
-学习内容：
+### Day02 - 数据处理基础
+- 变量与数据类型
+- 简单财务计算练习
 
-- Python环境配置
-- print输出
-- 第一个Python程序
+### Day03 - 条件判断
+- if / elif / else
+- 财富评分系统练习
 
+### Day04 - 循环结构
+- for 循环
+- while 循环
+- 数据重复处理
 
-## Day02 Money
+### Day05 - 用户信息管理
+- 字典结构
+- 用户资料录入
 
-学习内容：
+### Day06 - Wealth Predictor 初版
+- 创建个人财富预测项目
+- 财务数据分析逻辑
 
-- 变量
-- input输入
-- 基础计算
+### Day07 - Python模块化与时间处理
+- datetime 时间模块学习
+- random 随机模块学习
+- 自定义模块调用
+- Wealth Predictor 项目升级
+- 增加：
+  - 财富等级判断
+  - 财富增长预测
+  - 投资建议生成
+  - 财务报告输出
+  - 用户数据保存(JSON)
 
-
-## Day03 Score
-
-学习内容：
-
-- if条件判断
-- 数据比较
-
-
-## Day04 Loop
-
-学习内容：
-
-- for循环
-- while循环
-
-
-## Day05 Profile
-
-学习内容：
-
-- 多变量应用
-- 数据分析思维
-- 储蓄率计算
-
-
-## Day06 Wealth Predictor 💰
-
-第一个小项目：
-
-财富预测器
-
+### 当前项目成果
+✅ Wealth Predictor v1.0 完成
 
 功能：
-
-- 输入当前存款
-- 输入月收入
-- 输入月支出
-- 输入计划年份
-- 计算未来资产
-- 计算储蓄率
+- 用户资产分析
+- 收入分析
 - 财富等级判断
+- 未来10年资产预测
+- 投资建议生成
+- 自动生成财富报告
 
 ---
 ## 📊 Project Status
