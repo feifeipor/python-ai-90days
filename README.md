@@ -6,8 +6,6 @@
 
 > 我的 Python + AI 90天成长计划
 
-> 我的 Python + AI 90天成长计划
-
 ## 👨‍💻 About Me
 
 Hi，我是飞飞。
