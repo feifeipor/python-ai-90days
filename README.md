@@ -36,22 +36,6 @@ Hi，我是飞飞。
 - 个人能力成长记录
 ---
 
-# 📂 项目结构
-
-```
-python-ai-90days
-
-├── Day01_Hello.py
-├── Day02_Money.py
-├── Day03_Score.py
-├── Day04_Loop.py
-├── Day05_Profile.py
-├── Day06_WealthPredictor.py
-└── README.md
-```
-
----
-
 ## 📚 学习进度
 
 ### Day01 - Python基础
@@ -91,6 +75,28 @@ python-ai-90days
   - 投资建议生成
   - 财务报告输出
   - 用户数据保存(JSON)
+
+### 当前项目结构：
+
+```text
+python-ai-90days
+
+├── days
+│   ├── Day01
+│   ├── Day02
+│   ├── Day03
+│   ├── Day04
+│   ├── Day05
+│   ├── Day06
+│   └── Day07
+│
+└── projects
+    └── WealthPredictor
+        ├── main.py
+        ├── tools
+        ├── data
+        └── README.md
+```
 
 ### 当前项目成果
 ✅ Wealth Predictor v1.0 完成
