@@ -128,11 +128,15 @@ python main.py
 
 
 ## 📷 项目截图
-后续添加：
 
-程序运行截图
+### 程序运行截图
 
-财富报告截图
+![程序运行](code90-learning/day21/images/menu.png)
+
+
+### 财富报告截图
+
+![财富报告](code90-learning/day21/images/wealth_report.png)
 
 ## 👨‍💻 作者
 飞飞
