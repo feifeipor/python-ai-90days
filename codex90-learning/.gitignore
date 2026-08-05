@@ -1,0 +1,17 @@
+# Python缓存
+__pycache__/
+
+# 所有json数据
+**/*.json
+
+# 报告
+**/reports/
+
+# txt测试文件
+**/*.txt
+
+# PyCharm
+.idea/
+
+# 虚拟环境
+.venv/
