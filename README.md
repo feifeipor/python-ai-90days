@@ -131,12 +131,12 @@ python main.py
 
 ### 程序运行截图
 
-![程序运行](./Codex90-learning/day21/images/menu.png)
+![程序运行](codex90-learning/day21/images/menu.png)
 
 
 ### 财富报告截图
 
-![财富报告](./Codex90-learning/day21/images/wealth_report.png)
+![财富报告](codex90-learning/day21/images/wealth_report.png)
 
 ## 👨‍💻 作者
 飞飞
