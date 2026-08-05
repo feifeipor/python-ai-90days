@@ -1,188 +1,140 @@
-# 🚀 Python AI 90 Days
+# 🚀 Python AI 90天学习项目
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue)
 ![GitHub](https://img.shields.io/badge/GitHub-Project-black)
-![AI](https://img.shields.io/badge/AI-Learning-green)
+![Learning](https://img.shields.io/badge/AI-Learning-green)
 
-> 我的 Python + AI 90天成长计划
-
-## 👨‍💻 About Me
-
-Hi，我是飞飞。
-
-正在进行 Python + AI 90天学习计划。
-
-## 🎯 项目目标
-
-- 掌握 Python 核心编程能力
-- 学习 AI API 与智能工具开发
-- 开发自动化应用
-- 完成个人 AI 项目作品集
----
 
 ## 📌 项目介绍
 
-这是我的 Python + AI 90天成长项目。
+这是我的 Python + AI 90天学习项目。
 
-通过90天持续学习和实践，
-从 Python 基础开始，
-逐步进入 AI 工具开发、自动化和 AI 应用开发。
+通过90天学习，从 Python 基础语法开始，
+逐步完成：
 
-本项目记录：
+- Python基础
+- 文件操作
+- JSON数据处理
+- 面向对象编程
+- 项目开发
+- Git/GitHub管理
 
-- Python 学习过程
-- AI 技术实践
-- 项目开发过程
-- 个人能力成长记录
+
 ---
 
-## 📚 学习进度
+# 💰 Wealth Predictor
 
-### Day01 - Python基础
-- Python 环境搭建
-- Hello World
-- 基础语法学习
+## 项目简介
 
-### Day02 - 数据处理基础
-- 变量与数据类型
-- 简单财务计算练习
+Wealth Predictor 是一个个人财富预测与分析系统。
 
-### Day03 - 条件判断
-- if / elif / else
-- 财富评分系统练习
+用户可以输入个人财务信息，
+系统会保存用户数据，并预测未来财富变化。
 
-### Day04 - 循环结构
-- for 循环
-- while 循环
-- 数据重复处理
 
-### Day05 - 用户信息管理
-- 字典结构
-- 用户资料录入
+## ✨ 功能
 
-### Day06 - Wealth Predictor 初版
-- 创建个人财富预测项目
-- 财务数据分析逻辑
+### 👤 用户管理
 
-### Day07 - Python模块化与时间处理
-- datetime 时间模块学习
-- random 随机模块学习
-- 自定义模块调用
-- Wealth Predictor 项目升级
-- 增加：
-  - 财富等级判断
-  - 财富增长预测
-  - 投资建议生成
-  - 财务报告输出
-  - 用户数据保存(JSON)
+- 添加用户
+- 查看用户
+- 保存用户数据
 
-### 当前项目结构：
+
+### ⭐ VIP用户
+
+- 普通用户 / VIP用户区分
+- VIP财富建议
+- VIP预测模型
+
+
+### 📈 财富预测
+
+根据：
+
+- 当前资产
+- 月收入
+
+计算：
+
+- 未来10年预测资产
+
+
+### 📄 自动报告
+
+自动生成财富分析报告：
+
+包含：
+
+- 用户信息
+- 用户等级
+- 当前资产
+- 月收入
+- 未来预测
+- 财富建议
+---
+
+# 🏗 项目结构
 
 ```text
-python-ai-90days
+codex90-learning
 
-├── days
-│   ├── Day01
-│   ├── Day02
-│   ├── Day03
-│   ├── Day04
-│   ├── Day05
-│   ├── Day06
-│   └── Day07
+├── day01
+├── day02
+├── ...
 │
-└── projects
-    └── WealthPredictor
-        ├── main.py
-        ├── tools
-        ├── data
-        └── README.md
+└── day21
+    │
+    ├── main.py
+    ├── service.py
+    ├── user.py
+    ├── vip_user.py
+    │
+    ├── tools
+    │   ├── calculator.py
+    │   ├── database.py
+    │   ├── report.py
+    │   └── validator.py
+    │
+    └── reports
+```
+---
+
+# ▶️ 运行方式
+进入项目目录：
+
+```bash
+cd codex90-learning/day21
+python main.py
 ```
 
-### 当前项目成果
-✅ Wealth Predictor v1.0 完成
-
-功能：
-- 用户资产分析
-- 收入分析
-- 财富等级判断
-- 未来10年资产预测
-- 投资建议生成
-- 自动生成财富报告
-
----
-## 📊 Project Status
-
-### 当前进度
-
-- ✅ Python 基础学习 (50%)
-- 🚀 AI 学习阶段 (进行中)
-- ⏳ 自动化工具开发 (计划)
-- ⏳ AI 应用项目开发 (计划)
-
-- 最后更新：
-2026-07-16
-
-
-----------------
 
 ## 🛠 技术栈
-
-- 🐍 Python
-- 🔧 Git / GitHub
-- 🤖 AI Tools
-- ⚙️ Automation
-- 🌐 API Development
-
-# 📈 后续计划
-
-Day07 - Day30:
-
-- Python进阶
-- 文件处理
-- 数据分析
-- API调用
+- Python 3.12
+- 面向对象编程 OOP
+- JSON 数据存储
+- 文件读写
+- Git
+- GitHub
 
 
-Day31 - Day60:
+## 📚 学习进度
+| Day | 内容 |
+| :--- | :--- |
+| Day01-Day07 | Python基础 |
+| Day08-Day12 | 文件与JSON |
+| Day13-Day20 | 面向对象 |
+| Day21 | Wealth Predictor项目 |
 
-- AI基础
-- OpenAI API
-- 自动化工具
 
+## 📷 项目截图
+后续添加：
 
-Day61 - Day90:
+程序运行截图
 
-- AI项目开发
-- 完整作品
+财富报告截图
 
-## 📅 Roadmap
-
-### Phase 1：Python基础
-✅ Python语法
-✅ 数据结构
-✅ 文件操作
-
-### Phase 2：AI能力
-⬜ OpenAI API
-⬜ Prompt Engineering
-⬜ AI Agent
-
-### Phase 3：自动化
-⬜ Python自动化
-⬜ 爬虫
-⬜ 工作流
-
-### Phase 4：项目
-⬜ AI工具开发
-⬜ 完整应用
-
-## 👨‍💻 Author
-
+## 👨‍💻 作者
 飞飞
 
-Python + AI 学习者 🚀
-
-持续学习：
-- Python
-- AI Development
-- Automation
+---
