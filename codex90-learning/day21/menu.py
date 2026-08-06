@@ -1,5 +1,6 @@
 from tools.user_service import add_new_user, show_users
 from tools.wealth_service import predict_wealth
+from tools.validator import get_menu_choice
 
 def show_menu():
 
@@ -14,7 +15,7 @@ def show_menu():
         print("3. 财富预测")
         print("4. 退出")
 
-        choice = input("请选择:")
+        choice = get_menu_choice()
 
         if choice == "1":
             add_new_user()
@@ -28,6 +29,3 @@ def show_menu():
         elif choice == "4":
             print("程序退出")
             break
-
-        else:
-            print("输入错误，请输入1、2、3或4")

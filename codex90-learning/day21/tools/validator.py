@@ -43,3 +43,12 @@ def get_user_type():
             return user_type
 
         print("输入错误，请输入1或2")
+
+def get_menu_choice():
+    while True:
+        choice = input("请选择：").strip()
+
+        if choice in ("1", "2", "3", "4"):
+            return choice
+
+        print("输入错误，请输入1、2、3或4")
