@@ -24,11 +24,18 @@ def predict_wealth():
             item["name"]
         )
 
+    try:
+        index = int(
+            input("请选择用户编号:")
+        )
 
-    index = int(
-        input("请选择用户编号:")
-    )
+    except ValueError:
+        print("输入错误，请输入数字编号")
+        return
 
+    if index < 0 or index >= len(users):
+        print("用户编号不存在")
+        return
 
     user_data = users[index]
 
