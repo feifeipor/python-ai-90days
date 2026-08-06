@@ -1,7 +1,13 @@
 from user import User
 from vip_user import VIPUser
 from tools.database import load_users, add_user
-from tools.validator import check_name, check_money, check_users, get_number
+from tools.validator import (
+    check_name,
+    check_money,
+    check_users,
+    get_number,
+    get_user_type
+)
 
 def add_new_user():
 
@@ -28,7 +34,7 @@ def add_new_user():
     print("2. VIP用户")
 
 
-    user_type = input("请选择:")
+    user_type = get_user_type()
 
     if user_type == "1":
 
@@ -64,8 +70,6 @@ def add_new_user():
         print("用户已存在")
 
 def show_users():
-
-    from tools.database import load_users
 
     users = load_users()
 
