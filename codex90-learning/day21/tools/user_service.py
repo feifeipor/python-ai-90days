@@ -36,27 +36,18 @@ def add_new_user():
 
     user_type = get_user_type()
 
-    if user_type == "1":
+    user_classes = {
+        "1": User,
+        "2": VIPUser
+    }
 
-        user = User(
-            name,
-            money,
-            income
-        )
+    user_class = user_classes[user_type]
 
-    elif user_type == "2":
-
-        user = VIPUser(
-            name,
-            money,
-            income
-        )
-
-    else:
-
-        print("输入错误，请输入1或2")
-
-        return
+    user = user_class(
+        name,
+        money,
+        income
+    )
 
     result = add_user(user)
 
