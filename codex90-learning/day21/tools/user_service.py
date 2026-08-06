@@ -30,17 +30,7 @@ def add_new_user():
 
     user_type = input("请选择:")
 
-
-    if user_type == "2":
-
-        user = VIPUser(
-            name,
-            money,
-            income
-        )
-
-
-    else:
+    if user_type == "1":
 
         user = User(
             name,
@@ -48,6 +38,19 @@ def add_new_user():
             income
         )
 
+    elif user_type == "2":
+
+        user = VIPUser(
+            name,
+            money,
+            income
+        )
+
+    else:
+
+        print("输入错误，请输入1或2")
+
+        return
 
     result = add_user(user)
 
