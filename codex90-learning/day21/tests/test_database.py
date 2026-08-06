@@ -7,8 +7,6 @@ from vip_user import VIPUser
 from tools.database import (
     add_user,
     load_users,
-    create_users,
-    get_user_objects,
 )
 
 
@@ -55,26 +53,6 @@ class TestDatabase(unittest.TestCase):
 
         users = load_users()
         self.assertEqual(len(users), 1)
-
-    def test_create_users_returns_objects(self):
-        add_user(User("普通用户", 10000, 5000))
-        add_user(VIPUser("VIP用户", 20000, 8000))
-
-        users = create_users()
-
-        self.assertEqual(len(users), 2)
-        self.assertIsInstance(users[0], User)
-        self.assertIsInstance(users[1], VIPUser)
-
-    def test_get_user_objects_returns_objects(self):
-        add_user(User("张三", 10000, 5000))
-
-        users = get_user_objects()
-
-        self.assertEqual(len(users), 1)
-        self.assertIsInstance(users[0], User)
-        self.assertEqual(users[0].name, "张三")
-
 
 if __name__ == "__main__":
     unittest.main()

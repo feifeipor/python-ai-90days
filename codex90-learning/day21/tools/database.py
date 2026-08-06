@@ -92,33 +92,3 @@ def show_users():
         print(
             f"收入:{user['income']}"
         )
-
-def create_users():
-
-    data = load_users()
-
-    users = []
-
-    for item in data:
-
-        user = create_user_from_data(item)
-
-        users.append(user)
-
-
-    return users
-
-def get_user_objects():
-
-    data = load_users()
-
-
-    users = []
-
-    for item in data:
-
-        user = create_user_from_data(item)
-
-        users.append(user)
-
-    return users
