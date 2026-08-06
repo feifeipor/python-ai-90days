@@ -8,6 +8,7 @@ from tools.validator import (
     get_number,
     get_user_type
 )
+from tools.exceptions import DuplicateUserError
 
 def add_new_user() -> None:
 
@@ -49,16 +50,14 @@ def add_new_user() -> None:
         income
     )
 
-    result = add_user(user)
+    try:
+        add_user(user)
 
+    except DuplicateUserError as error:
+        print(error)
+        return
 
-    if result:
-
-        print("用户添加成功")
-
-    else:
-
-        print("用户已存在")
+    print("用户添加成功")
 
 def show_users() -> None:
 
