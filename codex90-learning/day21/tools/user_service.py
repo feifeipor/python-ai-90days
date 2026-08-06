@@ -36,12 +36,12 @@ def add_new_user():
 
     user_type = get_user_type()
 
-    user_classes = {
+    USER_CLASSES = {
         "1": User,
         "2": VIPUser
     }
 
-    user_class = user_classes[user_type]
+    user_class = USER_CLASSES[user_type]
 
     user = user_class(
         name,

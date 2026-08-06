@@ -4,10 +4,10 @@ from tools.validator import get_menu_choice
 
 def show_menu():
 
-    actions = {
-    "1": add_new_user,
-    "2": show_users,
-    "3": predict_wealth
+    MENU_ACTIONS = {
+        "1": add_new_user,
+        "2": show_users,
+        "3": predict_wealth
     }
 
     while True:
@@ -28,4 +28,5 @@ def show_menu():
 
             break
 
-        actions[choice]()
+        MENU_ACTIONS[choice]()
+
