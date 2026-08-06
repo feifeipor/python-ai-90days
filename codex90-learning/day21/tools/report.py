@@ -1,51 +1,5 @@
 import os
 from datetime import datetime
-def create_report(users):
-
-    with open(
-            "wealth_report.txt",
-        "w",
-        encoding="utf-8"
-    ) as file:
-
-
-        file.write("================\n")
-        file.write("财富预测报告\n")
-        file.write("================\n\n")
-
-        for user in users:
-
-            file.write(
-                f"用户:{user.name}\n"
-            )
-
-            file.write(
-                f"资产:{user.money}\n"
-            )
-
-            file.write(
-                f"收入:{user.income}\n"
-            )
-
-            if user.type == "vip":
-
-                file.write(
-                    "类型:VIP用户\n"
-                )
-
-                file.write(
-                    "建议:增加投资规划\n"
-                )
-
-            else:
-
-                file.write(
-                    "类型:普通用户\n"
-                )
-
-            file.write(
-                f"未来10年资产:{user.predict_future()}\n\n"
-            )
 
 def create_report(user, future_money):
 
@@ -93,4 +47,6 @@ def create_report(user, future_money):
 
 
     print("报告生成成功")
+
+    return filename
 
