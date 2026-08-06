@@ -4,6 +4,12 @@ from tools.validator import get_menu_choice
 
 def show_menu():
 
+    actions = {
+    "1": add_new_user,
+    "2": show_users,
+    "3": predict_wealth
+    }
+
     while True:
 
         print("================")
@@ -17,15 +23,9 @@ def show_menu():
 
         choice = get_menu_choice()
 
-        if choice == "1":
-            add_new_user()
-
-        elif choice == "2":
-            show_users()
-
-        elif choice == "3":
-            predict_wealth()
-
-        elif choice == "4":
+        if choice == "4":
             print("程序退出")
+
             break
+
+        actions[choice]()
