@@ -1,5 +1,8 @@
 import json
-from tools.user_factory import create_user_from_data
+from tools.log_config import get_logger
+
+
+logger = get_logger(__name__)
 
 def add_user(user):
 
@@ -15,7 +18,10 @@ def add_user(user):
 
         if old_user["name"] == user.name:
 
-            print("用户已存在")
+            logger.warning(
+                "Duplicate user rejected: %s",
+                user.name
+            )
 
             return False
 
@@ -49,6 +55,11 @@ def add_user(user):
             indent=4
         )
 
+    logger.info(
+        "User saved: name=%s, type=%s",
+        user.name,
+        user.type
+    )
 
     return True
 
@@ -62,6 +73,10 @@ def load_users():
 
         data = json.load(file)
 
+    logger.info(
+        "Loaded %d users",
+        len(data)
+    )
 
     return data
 

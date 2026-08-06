@@ -1,5 +1,9 @@
 import os
 from datetime import datetime
+from tools.log_config import get_logger
+
+
+logger = get_logger(__name__)
 
 def create_report(user, future_money):
 
@@ -45,8 +49,11 @@ def create_report(user, future_money):
 
         file.write(content)
 
+    logger.info(
+        "Report created: %s",
+        filename
+    )
 
     print("报告生成成功")
-
     return filename
 
