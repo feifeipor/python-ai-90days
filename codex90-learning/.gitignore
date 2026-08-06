@@ -15,3 +15,5 @@ __pycache__/
 
 # 虚拟环境
 .venv/
+
+!**/requirements.txt
