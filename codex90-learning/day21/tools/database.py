@@ -1,4 +1,6 @@
 import json
+from tools.user_factory import create_user_from_data
+
 def add_user(user):
 
     try:
@@ -93,36 +95,13 @@ def show_users():
 
 def create_users():
 
-    from user import User
-    from vip_user import VIPUser
-
-
     data = load_users()
-
 
     users = []
 
-
     for item in data:
 
-
-        if item["type"] == "vip":
-
-            user = VIPUser(
-                item["name"],
-                item["money"],
-                item["income"]
-            )
-
-
-        else:
-
-            user = User(
-                item["name"],
-                item["money"],
-                item["income"]
-            )
-
+        user = create_user_from_data(item)
 
         users.append(user)
 
@@ -133,28 +112,12 @@ def get_user_objects():
 
     data = load_users()
 
-    from user import User
-    from vip_user import VIPUser
 
     users = []
 
     for item in data:
 
-        if item["type"] == "vip":
-
-            user = VIPUser(
-                item["name"],
-                item["money"],
-                item["income"]
-            )
-
-        else:
-
-            user = User(
-                item["name"],
-                item["money"],
-                item["income"]
-            )
+        user = create_user_from_data(item)
 
         users.append(user)
 

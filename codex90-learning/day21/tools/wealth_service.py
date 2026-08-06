@@ -1,10 +1,9 @@
 from tools.database import load_users
 
-from user import User
-from vip_user import VIPUser
-
 from tools.validator import check_users, get_user_index
 from tools.report import create_report
+
+from tools.user_factory import create_user_from_data
 
 def predict_wealth() -> None:
 
@@ -28,22 +27,7 @@ def predict_wealth() -> None:
 
     user_data = users[index]
 
-
-    if user_data["type"] == "vip":
-
-        user = VIPUser(
-            user_data["name"],
-            user_data["money"],
-            user_data["income"]
-        )
-
-    else:
-
-        user = User(
-            user_data["name"],
-            user_data["money"],
-            user_data["income"]
-        )
+    user = create_user_from_data(user_data)
 
 
     future = user.predict_future()
