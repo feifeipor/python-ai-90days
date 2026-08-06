@@ -1,4 +1,4 @@
-from service import run_system
+from menu import show_menu
 
 
-run_system()
+show_menu()
