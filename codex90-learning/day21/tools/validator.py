@@ -35,7 +35,7 @@ def check_users(users):
 
     return True
 
-def get_user_type():
+def get_user_type() -> str:
     while True:
         user_type = input("请选择：")
 
@@ -44,7 +44,7 @@ def get_user_type():
 
         print("输入错误，请输入1或2")
 
-def get_menu_choice():
+def get_menu_choice() -> str:
     while True:
         choice = input("请选择：").strip()
 
@@ -53,7 +53,7 @@ def get_menu_choice():
 
         print("输入错误，请输入1、2、3或4")
 
-def get_user_index(users):
+def get_user_index(users: list) -> int:
     while True:
         user_input = input("请选择用户编号：").strip()
 

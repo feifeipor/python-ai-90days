@@ -9,7 +9,7 @@ from tools.validator import (
     get_user_type
 )
 
-def add_new_user():
+def add_new_user() -> None:
 
     name = input("请输入姓名:")
     if not check_name(name):
@@ -60,7 +60,7 @@ def add_new_user():
 
         print("用户已存在")
 
-def show_users():
+def show_users() -> None:
 
     users = load_users()
 

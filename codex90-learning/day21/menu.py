@@ -2,7 +2,7 @@ from tools.user_service import add_new_user, show_users
 from tools.wealth_service import predict_wealth
 from tools.validator import get_menu_choice
 
-def show_menu():
+def show_menu() -> None:
 
     MENU_ACTIONS = {
         "1": add_new_user,

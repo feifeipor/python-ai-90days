@@ -6,7 +6,7 @@ from vip_user import VIPUser
 from tools.validator import check_users, get_user_index
 from tools.report import create_report
 
-def predict_wealth():
+def predict_wealth() -> None:
 
     users = load_users()
 
@@ -25,7 +25,7 @@ def predict_wealth():
         )
 
     index = get_user_index(users)
-    
+
     user_data = users[index]
 
 
