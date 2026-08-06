@@ -17,6 +17,9 @@ class TestPredictMoney(unittest.TestCase):
         result = predict_money(0, 1000)
         self.assertEqual(result, 120000)
 
+    def test_all_values_are_zero(self):
+        result = predict_money(0, 0)
+        self.assertEqual(result, 0)
 
 if __name__ == "__main__":
     unittest.main()
