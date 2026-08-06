@@ -1,5 +1,6 @@
 import json
 from tools.log_config import get_logger
+from tools.exceptions import DuplicateUserError
 
 
 logger = get_logger(__name__)
@@ -17,14 +18,14 @@ def add_user(user):
     for old_user in users_data:
 
         if old_user["name"] == user.name:
-            print("用户已存在")
-
             logger.warning(
                 "Duplicate user rejected: %s",
                 user.name
             )
 
-            return False
+            raise DuplicateUserError(
+                f"用户“{user.name}”已存在"
+            )
 
 
     user_data = {

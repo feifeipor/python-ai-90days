@@ -8,6 +8,7 @@ from tools.database import (
     add_user,
     load_users,
 )
+from tools.exceptions import DuplicateUserError
 
 
 class TestDatabase(unittest.TestCase):
@@ -49,7 +50,8 @@ class TestDatabase(unittest.TestCase):
         duplicate_user = VIPUser("张三", 50000, 10000)
 
         self.assertTrue(add_user(first_user))
-        self.assertFalse(add_user(duplicate_user))
+        with self.assertRaises(DuplicateUserError):
+            add_user(duplicate_user)
 
         users = load_users()
         self.assertEqual(len(users), 1)
