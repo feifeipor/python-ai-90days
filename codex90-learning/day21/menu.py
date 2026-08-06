@@ -28,3 +28,6 @@ def show_menu():
         elif choice == "4":
             print("程序退出")
             break
+
+        else:
+            print("输入错误，请输入1、2、3或4")
