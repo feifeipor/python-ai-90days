@@ -155,6 +155,17 @@ python main.py
 
 ![财富报告](codex90-learning/day21/images/wealth_report.png)
 
+---
+
+## 🚀 后续计划
+
+- Day22-Day30 项目优化
+- 增加数据可视化
+- 学习 API 调用
+- 接入 AI 模型
+- 开发更多 Python 自动化项目
+
+
 ## 👨‍💻 作者
 飞飞
 
