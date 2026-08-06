@@ -52,3 +52,18 @@ def get_menu_choice():
             return choice
 
         print("输入错误，请输入1、2、3或4")
+
+def get_user_index(users):
+    while True:
+        user_input = input("请选择用户编号：").strip()
+
+        try:
+            index = int(user_input)
+        except ValueError:
+            print("输入错误，请输入数字编号")
+            continue
+
+        if 0 <= index < len(users):
+            return index
+
+        print("用户编号不存在")
