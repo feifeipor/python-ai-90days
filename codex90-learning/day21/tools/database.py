@@ -17,6 +17,7 @@ def add_user(user):
     for old_user in users_data:
 
         if old_user["name"] == user.name:
+            print("用户已存在")
 
             logger.warning(
                 "Duplicate user rejected: %s",
