@@ -4,10 +4,7 @@ import unittest
 
 from user import User
 from vip_user import VIPUser
-from tools.database import (
-    add_user,
-    load_users,
-)
+from tools.database import (add_user,load_users,)
 from tools.exceptions import DuplicateUserError
 
 
@@ -55,6 +52,47 @@ class TestDatabase(unittest.TestCase):
 
         users = load_users()
         self.assertEqual(len(users), 1)
+
+    def test_load_users_when_file_missing(self):
+        users = load_users()
+
+        self.assertEqual(users, [])
+
+    def test_load_users_when_file_empty(self):
+        with open(
+                "users.json",
+                "w",
+                encoding="utf-8"
+        ):
+            pass
+
+        users = load_users()
+
+        self.assertEqual(users, [])
+
+    def test_load_users_when_json_is_invalid(self):
+        with open(
+                "users.json",
+                "w",
+                encoding="utf-8"
+        ) as file:
+            file.write("{invalid json")
+
+        users = load_users()
+
+        self.assertEqual(users, [])
+
+    def test_load_users_when_data_is_not_a_list(self):
+        with open(
+                "users.json",
+                "w",
+                encoding="utf-8"
+        ) as file:
+            file.write('{"name": "张三"}')
+
+        users = load_users()
+
+        self.assertEqual(users, [])
 
 if __name__ == "__main__":
     unittest.main()

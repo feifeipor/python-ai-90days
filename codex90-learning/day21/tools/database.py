@@ -2,16 +2,11 @@ import json
 from tools.log_config import get_logger
 from tools.exceptions import DuplicateUserError
 
-
 logger = get_logger(__name__)
 
 def add_user(user):
 
-    try:
-        users_data = load_users()
-
-    except FileNotFoundError:
-        users_data = []
+    users_data = load_users()
 
 
     # 检查用户是否存在
@@ -65,15 +60,35 @@ def add_user(user):
 
     return True
 
-def load_users():
+def load_users() -> list:
 
-    with open(
+    try:
+        with open(
             "users.json",
-        "r",
-        encoding="utf-8"
-    ) as file:
+            "r",
+            encoding="utf-8"
+        ) as file:
+            data = json.load(file)
 
-        data = json.load(file)
+    except FileNotFoundError:
+        logger.info(
+            "users.json not found, using an empty user list"
+        )
+        return []
+
+    except json.JSONDecodeError as error:
+        logger.error(
+            "Invalid users.json content: %s",
+            error
+        )
+        return []
+
+    if not isinstance(data, list):
+        logger.error(
+            "Invalid users.json data type: expected list, got %s",
+            type(data).__name__
+        )
+        return []
 
     logger.info(
         "Loaded %d users",
