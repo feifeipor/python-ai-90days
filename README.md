@@ -3,7 +3,11 @@
 ![Python](https://img.shields.io/badge/Python-3.12-blue)
 ![GitHub](https://img.shields.io/badge/GitHub-Project-black)
 ![Learning](https://img.shields.io/badge/AI-Learning-green)
-
+> ✅ **Day1–Day30 第一阶段已完成**
+>
+> 📦 当前版本：`v1.1`  
+> 🧪 已加入自动化测试与 GitHub Actions  
+> 🚀 下一阶段：API、Web 后端与 AI 工具开发
 
 ## 📌 项目介绍
 
@@ -77,26 +81,47 @@ Wealth Predictor 是一个个人财富预测与分析系统。
 # 🏗 项目结构
 
 ```text
-codex90-learning
-
-├── day01
-├── day02
-├── ...
+python-ai-90days
+├── .github
+│   └── workflows
+│       └── python-tests.yml
 │
-└── day21
-    │
-    ├── main.py
-    ├── service.py
-    ├── user.py
-    ├── vip_user.py
-    │
-    ├── tools
-    │   ├── calculator.py
-    │   ├── database.py
-    │   ├── report.py
-    │   └── validator.py
-    │
-    └── reports
+├── codex90-learning
+│   ├── day01
+│   ├── day02
+│   ├── ...
+│   └── day21
+│       ├── main.py
+│       ├── menu.py
+│       ├── user.py
+│       ├── vip_user.py
+│       ├── users.json
+│       ├── requirements.txt
+│       │
+│       ├── tools
+│       │   ├── calculator.py
+│       │   ├── database.py
+│       │   ├── exceptions.py
+│       │   ├── log_config.py
+│       │   ├── report.py
+│       │   ├── user_factory.py
+│       │   ├── user_service.py
+│       │   ├── validator.py
+│       │   └── wealth_service.py
+│       │
+│       ├── tests
+│       │   ├── test_calculator.py
+│       │   ├── test_database.py
+│       │   ├── test_report.py
+│       │   ├── test_user.py
+│       │   ├── test_user_factory.py
+│       │   └── test_validator.py
+│       │
+│       ├── reports
+│       └── logs
+│
+├── LICENSE
+└── README.md
 ```
 ---
 
@@ -119,13 +144,72 @@ python main.py
 
 
 ## 📚 学习进度
-| Day | 内容 |
-| :--- | :--- |
-| Day01-Day07 | Python基础 |
-| Day08-Day12 | 文件与JSON |
-| Day13-Day20 | 面向对象 |
-| Day21 | Wealth Predictor项目 |
 
+| 阶段 | 学习内容 | 状态 |
+|---|---|---|
+| Day1–Day7 | Python 基础、变量、条件判断、函数、模块 | ✅ 完成 |
+| Day8–Day12 | 文件读写、JSON、类与对象 | ✅ 完成 |
+| Day13–Day20 | 项目拆分、Git、GitHub、代码组织 | ✅ 完成 |
+| Day21 | Wealth Predictor 核心项目 | ✅ 完成 |
+| Day22 | 项目结构重构与输入验证 | ✅ 完成 |
+| Day23 | 虚拟环境与依赖管理 | ✅ 完成 |
+| Day24 | `unittest` 自动化测试 | ✅ 完成 |
+| Day25 | GitHub Actions 持续集成 | ✅ 完成 |
+| Day26 | 分支与 Pull Request 工作流 | ✅ 完成 |
+| Day27 | `logging` 日志系统 | ✅ 完成 |
+| Day28 | 自定义异常处理 | ✅ 完成 |
+| Day29 | JSON 文件容错处理 | ✅ 完成 |
+| Day30 | 第一阶段验收与 `v1.1` 发布 | ✅ 完成 |
+| Day31–Day60 | API、Web 后端与 AI 工具开发 | 🚧 即将开始 |
+| Day61–Day90 | 产品部署、作品集与变现实践 | 📅 计划中 |
+
+## 🏆 Day1–Day30 第一阶段成果
+
+经过前 30 天的学习与实践，已经完成一个具备真实项目结构的
+Python 财富预测系统，并走通了基础软件开发流程。
+
+### Python 与项目能力
+
+- 掌握变量、条件判断、函数、模块和面向对象
+- 使用 JSON 保存和读取用户数据
+- 使用继承实现普通用户与 VIP 用户
+- 将菜单、业务逻辑、数据库和验证功能拆分到不同模块
+- 使用类型标注改善代码可读性
+- 使用自定义异常处理重复用户
+- 处理 JSON 文件不存在、为空和格式损坏等情况
+- 使用 `logging` 记录程序运行日志
+
+### 自动化测试
+
+项目使用 Python 标准库 `unittest` 编写自动化测试，覆盖：
+
+- 财富计算
+- 输入验证
+- 普通用户与 VIP 用户
+- 用户对象工厂
+- JSON 数据存储
+- 报告生成
+- 异常与边界情况
+
+文件测试使用临时目录运行，不会修改真实的 `users.json`。
+
+### GitHub 工程流程
+
+已经实践：
+
+- Git 分支开发
+- Pull Request
+- GitHub Actions 自动运行测试
+- 代码合并与分支清理
+- Git 标签
+- GitHub Release
+
+### 当前版本
+```
+Wealth Predictor v1.1
+v1.1 是 Day1–Day30 第一阶段的稳定版本。
+```
+---
 
 ## 📷 项目截图
 
