@@ -7,7 +7,7 @@ from urllib.request import Request, urlopen
 BASE_URL = "https://api.github.com"
 
 
-def github_get(path: str) -> dict:
+def github_get(path: str) -> dict | list:
     token = os.getenv("GITHUB_TOKEN")
 
     if not token:
@@ -53,3 +53,18 @@ def fetch_user(username: str) -> dict:
     return github_get(
         f"/users/{username}"
     )
+
+def fetch_commits(
+    owner: str,
+    repo: str,
+    per_page: int = 5
+) -> list:
+
+    data = github_get(
+        f"/repos/{owner}/{repo}/commits?per_page={per_page}"
+    )
+
+    if isinstance(data, list):
+        return data
+
+    return []
