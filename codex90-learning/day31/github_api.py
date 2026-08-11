@@ -2,6 +2,7 @@ import json
 import os
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
+from urllib.parse import urlencode
 
 
 BASE_URL = "https://api.github.com"
@@ -60,8 +61,12 @@ def fetch_commits(
     per_page: int = 5
 ) -> list:
 
+    params = urlencode({
+        "per_page": per_page
+    })
+
     data = github_get(
-        f"/repos/{owner}/{repo}/commits?per_page={per_page}"
+        f"/repos/{owner}/{repo}/commits?{params}"
     )
 
     if isinstance(data, list):

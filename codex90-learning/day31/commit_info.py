@@ -8,18 +8,30 @@ def main() -> None:
     if not owner or not repo:
         print("用户名和仓库名不能为空")
         return
+    try:
+        count = int(
+            input("请输入要查看的Commit数量（1-20）：")
+        )
+
+    except ValueError:
+        print("请输入数字")
+        return
+
+    if not 1 <= count <= 20:
+        print("数量必须在1到20之间")
+        return
 
     commits = fetch_commits(
         owner,
         repo,
-        per_page=5
+        per_page=count
     )
 
     if not commits:
         print("没有获取到Commit信息")
         return
 
-    print("\n最近5次Commit：")
+    print(f"\n最近{len(commits)}次Commit：")
 
     for index, item in enumerate(
         commits,
