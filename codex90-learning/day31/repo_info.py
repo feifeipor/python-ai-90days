@@ -1,46 +1,31 @@
 import json
-from urllib.error import HTTPError, URLError
-from urllib.request import Request, urlopen
-import os
 from pathlib import Path
+
+from github_api import fetch_repository
+
 
 DATA_DIR = Path(__file__).resolve().parent / "data"
 
 
-def fetch_repository(owner: str, repo: str) -> dict:
-    api_url = f"https://api.github.com/repos/{owner}/{repo}"
+def save_repository(repository: dict) -> Path:
+    DATA_DIR.mkdir(exist_ok=True)
 
-    token = os.getenv("GITHUB_TOKEN")
+    full_name = repository["full_name"].replace("/", "_")
+    file_path = DATA_DIR / f"{full_name}.json"
 
-    if not token:
-        print("没有找到 GITHUB_TOKEN")
-        return {}
+    with open(
+        file_path,
+        "w",
+        encoding="utf-8"
+    ) as file:
+        json.dump(
+            repository,
+            file,
+            ensure_ascii=False,
+            indent=4
+        )
 
-    request = Request(
-        api_url,
-        headers={
-            "Accept": "application/vnd.github+json",
-            "X-GitHub-Api-Version": "2026-03-10",
-            "User-Agent": "python-ai-90days",
-            "Authorization": f"Bearer {token}",
-        },
-    )
-
-    try:
-        with urlopen(request, timeout=10) as response:
-            response_text = response.read().decode("utf-8")
-            return json.loads(response_text)
-
-    except HTTPError as error:
-        print(f"HTTP请求失败，状态码：{error.code}")
-
-    except URLError as error:
-        print(f"网络连接失败：{error.reason}")
-
-    except json.JSONDecodeError:
-        print("服务器返回的内容不是有效JSON")
-
-    return {}
+    return file_path
 
 
 def main() -> None:
@@ -69,28 +54,6 @@ def main() -> None:
     print(f"仓库地址：{repository['html_url']}")
 
     print(f"\nJSON数据已保存：{file_path}")
-
-    
-def save_repository(repository: dict) -> Path:
-    DATA_DIR.mkdir(exist_ok=True)
-
-    full_name = repository["full_name"].replace("/", "_")
-
-    file_path = DATA_DIR / f"{full_name}.json"
-
-    with open(
-        file_path,
-        "w",
-        encoding="utf-8"
-    ) as file:
-        json.dump(
-            repository,
-            file,
-            ensure_ascii=False,
-            indent=4
-        )
-
-    return file_path
 
 
 if __name__ == "__main__":
